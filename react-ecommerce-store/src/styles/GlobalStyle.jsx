@@ -22,6 +22,11 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: center;
         padding: 5px;
+        margin-top: 75px;
+    }
+
+    a {
+        text-decoration: none;
     }
 `;
 

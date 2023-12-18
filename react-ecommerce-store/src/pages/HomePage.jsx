@@ -3,7 +3,6 @@ import ProductList from '../components/ProductList';
 import SearchBar from "../components/SearchBar";
 import styled from 'styled-components';
 
-
 const HomePage = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);

@@ -1,12 +1,14 @@
-import { json, useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 import React, { useState, useEffect } from "react"
 import styled from 'styled-components';
-
+import { useStore } from "../store/cartStore";
 
 const ProductDetail = () => {
+    const setNewItem = useStore((state) => state.setItems)
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(true);
     let params = useParams()
+
     const productUrl = `https://api.noroff.dev/api/v1/online-shop/${params.id}`
 
     useEffect(() => {
@@ -35,6 +37,11 @@ const ProductDetail = () => {
         return <div>Loading....</div>
     }
 
+    const addItem = (item) => {
+        setNewItem(item)
+
+      }
+
     return (
         <ProductContainer>
             <ImgContainer>
@@ -52,7 +59,7 @@ const ProductDetail = () => {
                     <span>{product.discountedPrice},-</span>
                     
                 </div>
-                <div><Button>Add to cart</Button></div>
+                <div><Button onClick={() => addItem(product)}>Add to cart</Button></div>
             
 
             </PriceContainer>

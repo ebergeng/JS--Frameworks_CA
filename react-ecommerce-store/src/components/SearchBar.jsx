@@ -8,26 +8,27 @@ const SearchBar = ({ onSearch }) => {
     setSearchTerm(event.target.value);
   };
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     if (onSearch) {
       onSearch(searchTerm);
     }
   };
 
   return (
-    <SearcBar>
+    <SearcBar onSubmit={handleSearch}>
       <input
         type="text"
         placeholder="Search..."
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button type='submit' onClick={handleSearch}>Search</button>
     </SearcBar>
   );
 };
 
-const SearcBar = styled.div`
+const SearcBar = styled.form`
   height: 30px;
   border-radius: 5px;
   margin: 5px;
