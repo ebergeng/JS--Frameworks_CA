@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     main {
-        min-height: 90vh;
         display: flex;
         justify-content: center;
         padding: 5px;
@@ -27,6 +26,13 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
+    }
+
+    #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: space-between;
     }
 `;
 

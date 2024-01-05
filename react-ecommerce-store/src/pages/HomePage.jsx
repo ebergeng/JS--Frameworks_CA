@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import ProductList from '../components/ProductList';
-import SearchBar from "../components/SearchBar";
+import ProductList from '../components/product/ProductList';
+import SearchBar from "../components/searchbar/SearchBar";
 import styled from 'styled-components';
+import Spinner from '../components/spinner/Spinner';
 
 const HomePage = () => {
     const [allProducts, setAllProducts] = useState([]);
@@ -38,7 +39,7 @@ const HomePage = () => {
 
     if(loading) {
         return (
-            <p>Loading....</p>
+            <Spinner />
         )
     }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, NavLink } from 'react-router-dom';
-import CartIcon from "./CartIcon";
+import CartIcon from "../cart/CartIcon";
 
 
 function Header() {

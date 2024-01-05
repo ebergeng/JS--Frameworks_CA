@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import { ReactComponent as TrachCan } from '../assets/trash.svg';
+import { ReactComponent as TrachCan } from '../../assets/trash.svg';
 
 const TrashCanIcon = () => {
     return (

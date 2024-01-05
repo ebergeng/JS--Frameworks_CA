@@ -1,5 +1,5 @@
 import React from "react"
-import { useStore } from "../store/cartStore"
+import { useStore } from "../../store/cartStore"
 import styled from "styled-components"
 import TrashCanIcon from "./TrashCanIcon";
 

@@ -1,41 +1,10 @@
-import {  useParams } from "react-router-dom"
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styled from 'styled-components';
-import { useStore } from "../store/cartStore";
+import { useStore } from "../../store/cartStore";
 
-const ProductDetail = () => {
+const ProductDetail = (item) => {
     const setNewItem = useStore((state) => state.setItems)
-    const [product, setProduct] = useState([])
-    const [loading, setLoading] = useState(true);
-    let params = useParams()
-
-    const productUrl = `https://api.noroff.dev/api/v1/online-shop/${params.id}`
-
-    useEffect(() => {
-        const fetchProduct = async () => {
-
-            try {
-                const response = await fetch(productUrl)
-                if(!response.ok) {
-                    throw new Error('Failed to fetch product')
-                }
-                const productData = await response.json()
-                setProduct(productData)
-
-            }catch(error) {
-                console.error(error)
-            }finally {
-                setLoading(false)
-            }
-            
-
-        }
-        fetchProduct()
-    }, [])
-
-    if(loading) {
-        return <div>Loading....</div>
-    }
+    const product = item.product
 
     const addItem = (item) => {
         setNewItem(item)
@@ -48,7 +17,7 @@ const ProductDetail = () => {
                 <img src={product.imageUrl} alt={product.title} />
             </ImgContainer>
             <TextContainer>
-                <h2>{product.title}</h2>
+                <h1>{product.title}</h1>
                 <p>{product.description}</p>
             </TextContainer>
             <PriceContainer>
@@ -57,14 +26,9 @@ const ProductDetail = () => {
                         <span className="originalPrice">{product.price},-</span>
                     )}
                     <span>{product.discountedPrice},-</span>
-                    
                 </div>
                 <div><Button onClick={() => addItem(product)}>Add to cart</Button></div>
-            
-
             </PriceContainer>
-            
-            
         </ProductContainer>
     )
 }
@@ -116,10 +80,16 @@ const ImgContainer = styled.div`
 const TextContainer = styled.div`
     height: 100%;
     text-align: center;
-    color: white;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
+    h1 {
+        color: white;
+    }
+    p {
+        color: #e4e4e4;
+    }
 `
 
 const ProductContainer = styled.div`

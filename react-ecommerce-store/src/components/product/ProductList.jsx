@@ -21,10 +21,8 @@ const ProductList = ({ products }) => {
                                 <div className='productInfo'>
                                     <h3>{product.title}</h3>
                                 </div>
-                            
                             </Li>
                         </Link>
-                       
                     ))
                 }
             </ul>
