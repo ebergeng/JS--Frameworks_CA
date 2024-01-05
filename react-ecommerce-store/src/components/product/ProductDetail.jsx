@@ -1,6 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
 import { useStore } from "../../store/cartStore";
+import { PrimaryButton } from "../buttons/PrimaryButton";
 
 const ProductDetail = (item) => {
     const setNewItem = useStore((state) => state.setItems)
@@ -27,24 +28,11 @@ const ProductDetail = (item) => {
                     )}
                     <span>{product.discountedPrice},-</span>
                 </div>
-                <div><Button onClick={() => addItem(product)}>Add to cart</Button></div>
+                <div><PrimaryButton onClick={() => addItem(product)}>Add to cart</PrimaryButton></div>
             </PriceContainer>
         </ProductContainer>
     )
 }
-
-const Button = styled.button`
-    width: 100%;
-    background-color: #242424;
-    border: none;
-    color: #FF8800;
-    height: 50px;
-    :hover {
-        cursor: pointer;
-        color: #1EFF00;
-        background-color: #333333;
-    }
-`
 
 const PriceContainer = styled.div`
     height: 100%;

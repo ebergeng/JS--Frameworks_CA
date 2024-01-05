@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStore } from '../../store/cartStore';
+import { CheckoutButton } from '../buttons/CheckoutButton';
 
 const CartCheckout = () => {
     const items = useStore((state) => state.items)
-    console.log(items)
 
     const calcPrice = () => {
         let price = 0
@@ -17,6 +17,7 @@ const CartCheckout = () => {
     return (
         <CheckoutBox>
              <TotalPrice>Total: {calcPrice()}</TotalPrice> 
+             
             <CheckoutButton>Check Out</CheckoutButton>
         </CheckoutBox>
     )
@@ -40,19 +41,4 @@ const TotalPrice = styled.div`
     font-weight: bold;
     color: #FF8800;
     margin-left: 8px;
-`
-
-const CheckoutButton = styled.button`
-    height: 100%;
-    width: 100%;
-    background-color: #242424;
-    border: none;
-    color: #FF8800;
-    font-weight: bold;
-    border-radius: 5px;
-    :hover {
-        cursor: pointer;
-        color: #1EFF00;
-        background-color: #333333;
-    }
 `

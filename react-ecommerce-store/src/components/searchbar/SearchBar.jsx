@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { ReactComponent as SearchIcon } from '../../assets/search.svg';
+import  SearchButton  from '../buttons/SearchButton';
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
+  const handleInputChange = (e) => {
+    setSearchTerm(e.target.value);
   };
 
   const handleSearch = (e) => {
@@ -24,7 +24,7 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button type='submit' onClick={handleSearch}><SearchIcon className="searchIcon" /></button>
+      <SearchButton type='submit' onClick={handleSearch} />
     </SearcBar>
   );
 };
@@ -45,22 +45,7 @@ const SearcBar = styled.form`
     box-sizing: border-box;
     background-color: #c9c8c8;
   }
-  button {
-    height: 30px;
-    border: none;
-    border-left: 4px solid #2e2e2e;
-    background-color: #2e2e2e;
-    :hover {
-      cursor: pointer;
-      .searchIcon:hover {
-        fill: #27e027;
-      }
-      
-    }
 
-    
-    
-  }
   :focus-within {
     box-shadow: 2px 2px 5px #313131;
   }
