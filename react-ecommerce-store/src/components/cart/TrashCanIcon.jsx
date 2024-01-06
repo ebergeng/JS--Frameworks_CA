@@ -1,15 +1,14 @@
 import React from "react";
-import styled from "styled-components"
-import { ReactComponent as TrachCan } from '../../assets/trash.svg';
+import styled from "styled-components";
+import { ReactComponent as TrachCan } from "../../assets/trash.svg";
 
 const TrashCanIcon = () => {
-    return (
-        <TrashIconContainer>
-            <TrachCan className={"icon"}/>
-        </TrashIconContainer>
-    )
-}
-
+  return (
+    <TrashIconContainer>
+      <TrachCan className={"icon"} />
+    </TrashIconContainer>
+  );
+};
 
 const TrashIconContainer = styled.div`
   position: relative;
@@ -21,7 +20,7 @@ const TrashIconContainer = styled.div`
     height: 25px;
   }
   :hover path {
-    fill: #FF0000;
+    fill: #ff0000;
   }
 `;
 

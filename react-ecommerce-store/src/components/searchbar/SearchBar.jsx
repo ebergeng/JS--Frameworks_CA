@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import  SearchButton  from '../buttons/SearchButton';
+import React, { useState } from "react";
+import styled from "styled-components";
+import SearchButton from "../buttons/SearchButton";
 
 const SearchBar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
@@ -24,7 +24,7 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <SearchButton type='submit' onClick={handleSearch} />
+      <SearchButton type="submit" onClick={handleSearch} />
     </SearcBar>
   );
 };
@@ -35,7 +35,7 @@ const SearcBar = styled.form`
   margin: 5px;
   border: 4px solid #2e2e2e;
   border-radius: 5px;
- 
+
   display: flex;
   input {
     height: 30px;
@@ -49,7 +49,6 @@ const SearcBar = styled.form`
   :focus-within {
     box-shadow: 2px 2px 5px #313131;
   }
-
-`
+`;
 
 export default SearchBar;

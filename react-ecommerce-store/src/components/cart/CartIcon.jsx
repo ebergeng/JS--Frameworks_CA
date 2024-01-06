@@ -1,18 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import { ReactComponent as ShoppingCartIcon } from '../../assets/shopping-cart.svg';
-import { useStore } from '../../store/cartStore';
+import React from "react";
+import styled from "styled-components";
+import { ReactComponent as ShoppingCartIcon } from "../../assets/shopping-cart.svg";
+import { useStore } from "../../store/cartStore";
 
 const CartIcon = () => {
-    const items = useStore((state) => state.items)
-    const count = items.length
+  const items = useStore((state) => state.items);
+  const count = items.length;
 
   return (
     <CartIconContainer>
-      <ShoppingCartIcon className={"icon"} /> {/* Dette er SVG-ikonet for handlekurven */}
-      <ItemCountBadge itemCount={count}>
-        {count}
-      </ItemCountBadge>
+      <ShoppingCartIcon className={"icon"} />{" "}
+      {/* Dette er SVG-ikonet for handlekurven */}
+      <ItemCountBadge itemCount={count}>{count}</ItemCountBadge>
     </CartIconContainer>
   );
 };
@@ -34,7 +33,6 @@ const CartIconContainer = styled.div`
   }
 `;
 
-
 const ItemCountBadge = styled.span`
   position: absolute;
   top: 10px;
@@ -45,7 +43,7 @@ const ItemCountBadge = styled.span`
   height: 8px;
   border-radius: 100%;
   padding: 8px;
-  display: ${(props) => (props.itemCount > 0 ? 'flex' : 'none')};
+  display: ${(props) => (props.itemCount > 0 ? "flex" : "none")};
   justify-content: center;
   align-items: center;
   font-size: 14px;
