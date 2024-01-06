@@ -8,7 +8,6 @@ const LayOut = ({children}) => (
     <main>
         {children}
     </main>
-    
     <Footer />
     </>
 )

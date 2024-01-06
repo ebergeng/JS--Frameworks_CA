@@ -5,12 +5,12 @@ export const CheckoutButton = styled.button`
     width: 100%;
     background-color: #242424;
     border: none;
-    color: #FF8800;
+    color: var(--color-orange);
     font-weight: bold;
     border-radius: 5px;
     :hover {
         cursor: pointer;
-        color: #1EFF00;
+        color: var(--color-green);
         background-color: #333333;
     }
 `

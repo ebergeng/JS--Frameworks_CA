@@ -53,22 +53,22 @@ const ReviewsContainer = styled.div`
     flex-direction: column;
     gap: 8px;
     width: 100%;
-    color: white;
+    color: var(--color-text-one);
 `
 
 const Review = styled.div`
-    background-color: #4E4E4E;
+    background-color: var(--color-primary);
     min-height: 50px;
     padding: 8px;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px #313131;
+    box-shadow: var(--box-shadow);
 `
 
 const ReviewHeader = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    color: white;
+    color: var(--color-text-one);
 
     img {
         height: 10px;
@@ -78,7 +78,7 @@ const ReviewHeader = styled.div`
 
 const ReviewBody= styled.div`
     text-align: center;
-    color: #e4e4e4;
+    color: var(--color-text-two);
     
 `
 

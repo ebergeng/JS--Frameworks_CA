@@ -43,7 +43,7 @@ const SearcBar = styled.form`
     outline: none;
     width: max-content;
     box-sizing: border-box;
-    background-color: #c9c8c8;
+    background-color: white;
   }
 
   :focus-within {

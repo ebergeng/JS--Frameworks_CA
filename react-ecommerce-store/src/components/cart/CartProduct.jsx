@@ -13,7 +13,7 @@ const CartProduct = () => {
 
     return (
             <Wrapper>
-            {cartItems.length === 0? <div>No items!</div> :
+            {
                 cartItems.map(item => (
                     <ProductContainer key={item.id}>
                         <ImgContainer>
@@ -43,13 +43,13 @@ const Wrapper = styled.div`
 `
 
 const ProductContainer = styled.div`
-    background-color: #717171;
+    background-color: var(--color-secondary);
     width: 100%;
     max-width: 800px;
     height: 100px;
     display: grid;
     grid-template-columns: auto 3fr 1fr;
-    box-shadow: 2px 2px 5px #313131;
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
     overflow: hidden;
     margin: auto;
@@ -75,7 +75,7 @@ const ImgContainer = styled.div`
 const TextContainer = styled.div`
     height: 100%;
     text-align: center;
-    color: white;
+    color: var(--color-text-one);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,11 +83,11 @@ const TextContainer = styled.div`
 
 const PriceContainer = styled.div`
     height: 100%;
-    background-color: #464646;
+    background-color: var(--color-primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #FF8800;
+    color: var(--color-orange);
     font-size: 22px;
     padding-left: 10px;
     padding-right: 10px;
@@ -99,7 +99,7 @@ const PriceContainer = styled.div`
         height: 100%;
     }
     .originalPrice {
-        color: white;
+        color: var(--color-text-one);
         text-decoration: line-through;
         font-size: 16px;
     }

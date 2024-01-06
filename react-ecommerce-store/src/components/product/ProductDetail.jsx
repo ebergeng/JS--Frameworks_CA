@@ -36,11 +36,11 @@ const ProductDetail = (item) => {
 
 const PriceContainer = styled.div`
     height: 100%;
-    background-color: #464646;
+    background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #FF8800;
+    color: var(--color-orange);
     font-size: 22px;
 
     .priceArea {
@@ -51,7 +51,7 @@ const PriceContainer = styled.div`
         height: 100%;
     }
     .originalPrice {
-        color: white;
+        color: var(--color-text-one);
         text-decoration: line-through;
         font-size: 16px;
     }
@@ -60,6 +60,7 @@ const PriceContainer = styled.div`
 
 const ImgContainer = styled.div`
     margin: auto;
+    display: flex;
     img {
         width: 100%;
     }
@@ -73,25 +74,24 @@ const TextContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     h1 {
-        color: white;
+        color: var(--color-text-one);
     }
     p {
-        color: #e4e4e4;
+        color: var(--color-text-two);
     }
 `
 
 const ProductContainer = styled.div`
-    background-color: #717171;
+    background-color: var(--color-secondary);
     width: 100%;
     max-width: 800px;
     min-height: 300px;
     height: fit-content;
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    box-shadow: 2px 2px 5px #313131;
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
     overflow: hidden;
-    margin: auto;
     @media screen and (max-width: 400px) {
         display: flex;
         flex-direction: column;

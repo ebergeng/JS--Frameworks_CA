@@ -91,7 +91,7 @@ const ContactFormContainer = styled.form`
 `
 
 const BodyWrapper = styled.div `
-    background-color: #717171;
+    background-color: var(--color-secondary);
     width: 100%;
     textarea {
         width: 100%;
@@ -102,7 +102,7 @@ const BodyWrapper = styled.div `
 `
 
 const ContactInfoWrapper = styled.div`
-    background-color: #4E4E4E;
+    background-color: var(--color-primary);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ const ContactInfoWrapper = styled.div`
         outline: none;
     }
     label {
-        color: #e4e4e4;
+        color: var(--color-text-two);
     }
 `
 
@@ -123,7 +123,7 @@ const ContactInfoHeader = styled.div`
     h2, h3 {
         margin: 0;
         margin-top: 8px;
-        color: white;
+        color: var(--color-text-one);
     }
 `
 
@@ -134,5 +134,5 @@ const ContactInfoBody = styled.div`
 
 const ErrorMsg = styled.span`
     font-size: 12px;
-    color: orange;
+    color: var(--color-orange);
 `

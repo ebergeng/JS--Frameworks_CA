@@ -32,22 +32,22 @@ const ProductList = ({ products }) => {
 }
 
 const Li = styled.li`
-    background-color: white;
+    background-color: var(--color-text-one);
     width: 300px;
-    background-color: #4E4E4E;
+    background-color: var(--color-primary);
     display: inline-block;
-    box-shadow: 2px 2px 5px #313131;
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     h3 {
-        color: white;
+        color: var(--color-text-one);
         text-align: center;
     };
 
     p {
-        color: white;
+        color: var(--color-text-one);
         padding: 10px;
     }
 

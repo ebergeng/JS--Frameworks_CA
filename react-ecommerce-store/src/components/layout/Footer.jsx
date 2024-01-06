@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 function Footer() {
 
     const Footer = styled.footer`
-    background-color: #626285;
-    height: 55px;
+    background: linear-gradient(#949494d2, #000000);
+    min-height: 15vh;
     width: 100%;
 `
 

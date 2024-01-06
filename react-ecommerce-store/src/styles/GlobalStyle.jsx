@@ -2,8 +2,14 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     * {
-        --color-primary: blue;
-        --color-secondary: red;
+        --color-primary: #4E4E4E;
+        --color-secondary: #717171;
+        --color-green: #1EFF00;
+        --color-orange: #FF8800;
+        --color-text-one: white;
+        --color-text-two: #e4e4e4;
+        --box-shadow: 2px 2px 5px #313131;
+        
     }
 
     html {
@@ -11,10 +17,11 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         height: 100%;
-        background: linear-gradient(#4D4D4D, #9B9B9B, #4D4D4D);
+        background: #cfcfcf;
         margin: 0;
         display: flex;
         flex-direction: column;
+        height: 100vh;
     }
 
     main {
@@ -22,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
         justify-content: center;
         padding: 5px;
         margin-top: 75px;
+        min-height: 80vh;
     }
 
     a {
@@ -31,7 +39,6 @@ const GlobalStyle = createGlobalStyle`
     #root {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
         justify-content: space-between;
     }
 `;

@@ -13,6 +13,8 @@ const getSavedItems = () => {
       localStorage.setItem('cartItems', JSON.stringify(newItems));
       return { items: newItems };
     }),
+
+
     removeOneItem: (itemId) => set((state) => {
         let itemRemoved = false;
         const newItems = state.items.filter((item) => {
@@ -25,4 +27,11 @@ const getSavedItems = () => {
         localStorage.setItem('cartItems', JSON.stringify(newItems));
         return { items: newItems };
       }),
+    
+    clearItems: () => set(() => {
+      localStorage.removeItem("cartItems")
+      return { items: []}
+    }) 
+     
+    
     }));

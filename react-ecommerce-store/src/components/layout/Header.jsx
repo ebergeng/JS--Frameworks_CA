@@ -23,7 +23,7 @@ function Header() {
             text-decoration: none;
             font-size: 28px;
             font-weight: bold;
-            color: orange;
+            color: var(--color-orange);
             margin-left: 8px;
         }
 
@@ -47,11 +47,11 @@ function Header() {
        
         :hover {
             text-decoration: underline;
-            color: orange;
+            color: var(--color-orange);
         }
         .active {
             span {
-                color: white;
+                color: var(--color-text-one);
             }
         }
     
