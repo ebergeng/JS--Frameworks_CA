@@ -1,10 +1,8 @@
 import React from "react";
-import Header from "./components/layout/Header";
-import { Routes, Route, Link, Outlet, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import LayOut from "./components/layout/Layout";
-import ProductDetail from "./components/product/ProductDetail";
 import CheckoutPage from "./pages/CheckoutPage";
 import ProductPage from "./pages/ProductPage";
 import CheckoutSuccessPage from "./pages/CheckoutSuccessPage";
