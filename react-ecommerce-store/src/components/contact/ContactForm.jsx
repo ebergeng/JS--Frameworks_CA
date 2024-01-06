@@ -17,11 +17,12 @@ const ContactForm = () => {
         const newErrors = {}
         
         if (form.fullName.length < 3) {
-            newErrors.fullName = "must be at least 3 characters long"
+            newErrors.fullName = "must be at least0 3 characters long"
         }
         if (form.subject.length < 3) {
             newErrors.subject = "must be at least 3 characters long"
         }
+        // eslint-disable-next-line no-useless-escape
         if (!form.email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
             newErrors.email = "must be a valid email"
         }
